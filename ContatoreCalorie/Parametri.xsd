@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ParametriDiConfigurazione">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="stile">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Font" type="xs:string"/>
+							<xs:element name="Dimensione" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="log">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PortaServerLog" type="xs:int"/>
+							<xs:element name="IndirizzoIPclient" type="xs:string"/>
+							<xs:element name="IndirizzoIPLog" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DBMS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IPDBMS" type="xs:string"/>
+							<xs:element name="PortaDBMS" type="xs:int"/>
+							<xs:element name="UsernameDBMS" type="xs:string"/>
+							<xs:element name="PasswordDBMS" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ListaAlimenti">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Alimento" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nome" type="xs:string"/>
+										<xs:element name="proteine" type="xs:double"/>
+										<xs:element name="carboidrati" type="xs:double"/>
+										<xs:element name="grassi" type="xs:double"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>		
+	
+	
+		
